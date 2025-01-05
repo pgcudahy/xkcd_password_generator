@@ -1,0 +1,18 @@
+{
+  "manifest_version": 3,
+  "name": "XKCD Password Generator",
+  "version": "1.0",
+  "description": "Generates XKCD-style passwords from selected text fields",
+  "permissions": [
+    "contextMenus",
+    "activeTab",
+    "scripting"
+  ],
+  "background": {
+    "service_worker": "background.js"
+  },
+  "content_scripts": [{
+    "matches": ["<all_urls>"],
+    "js": ["content.js"]
+  }]
+}
